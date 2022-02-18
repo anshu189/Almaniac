@@ -2823,135 +2823,65 @@ def Exit_00():
     os._exit(0)
 
 
+# functions stored in dictionary with choices as key
+CHOICES = {
+    1:C_intro_1,
+    2:C_install_2,
+    3:C_use_compile_3,
+    4:algorithm_flowchart_4,
+    5:C_structure_5,
+    6:startr_temp_6,
+    7:i_o_func_7,
+    8:format_specifier_8,
+    9:data_types_9,
+    10:operators_10,
+    11:type_casting_11,
+    12:decision_statement_12,
+    13:switch_13,
+    14:conditional_14,
+    15:looping_15,
+    16:loop_nested_16,
+    17:jump_statement_17,
+    18:arrays_declare_initialize_18,
+    19:arrays_two_dim_19,
+    20:arrays_search_sorting_20,
+    21:string_intro_21,
+    22:functions_intro_22,
+    23:functions_user_defined_23,
+    24:functions_recurrsive_24,
+    25:intro_macros_25,
+    26:pointers_basics_26,
+    27:pointer_pointer_airthmetic_27,
+    28:pointer_array_28,
+    29:pointer_functions_29,
+    30:storage_classes_intro_30,
+    31:structure_basics_31,
+    32:structure_nested_array_32,
+    33:structure_funct_33,
+    34:DMA_basics_34,
+    35:DMA_array_structure_35,
+    69:NBWB_69,
+    99:cheatsheet_99,
+    0:Exit_00,
+    77:aboutme,
+    911:contentmenu
+}
+# in case of invalid or unavailable choice
+default = lambda: print("Invalid Input! Try Again.\n")
 
 def choice_by_user():
     try:
         choice = int(input("Choose any by entering the correct serial no. (911 for menu)> "))
-        if choice==1:
-            C_intro_1()
-            choice_by_user()
-        elif choice==2:
-                C_install_2()
-                choice_by_user()
-        elif choice==3:
-            C_use_compile_3()
-            choice_by_user()
-        elif choice==4:
-                algorithm_flowchart_4()
-                choice_by_user()
-        elif choice==5:
-                C_structure_5()
-                choice_by_user()
-        elif choice==6:
-                startr_temp_6()
-                choice_by_user()
-        elif choice==7:
-                i_o_func_7()
-                choice_by_user()
-        elif choice==8:
-                format_specifier_8()
-                choice_by_user()
-        elif choice==9:
-                data_types_9()
-                choice_by_user()
-        elif choice==10:
-                operators_10()
-                choice_by_user()
-        elif choice==11:
-                type_casting_11()
-                choice_by_user()
-        elif choice==12:
-                decision_statement_12()
-                choice_by_user()
-        elif choice==13:
-                switch_13()
-                choice_by_user()
-        elif choice==14:
-                conditional_14()
-                choice_by_user()
-        elif choice==15:
-                looping_15()
-                choice_by_user()
-        elif choice==16:
-                loop_nested_16()
-                choice_by_user()
-        elif choice==17:
-                jump_statement_17()
-                choice_by_user()
-        elif choice==18:
-                arrays_declare_initialize_18()
-                choice_by_user()
-        elif choice==19:
-                arrays_two_dim_19()
-                choice_by_user()
-        elif choice==20:
-                arrays_search_sorting_20()
-                choice_by_user()
-        elif choice==21:
-                string_intro_21()
-                choice_by_user()
-        elif choice==22:
-                functions_intro_22()
-                choice_by_user()
-        elif choice==23:
-                functions_user_defined_23()
-                choice_by_user()
-        elif choice==24:
-                functions_recurrsive_24()
-                choice_by_user()
-        elif choice==25:
-                intro_macros_25()
-                choice_by_user()
-        elif choice==26:
-                pointers_basics_26()
-                choice_by_user()
-        elif choice==27:
-                pointer_pointer_airthmetic_27()
-                choice_by_user()
-        elif choice==28:
-                pointer_array_28()
-                choice_by_user()
-        elif choice==29:
-                pointer_functions_29()
-                choice_by_user()
-        elif choice==30:
-                storage_classes_intro_30()
-                choice_by_user()
-        elif choice==31:
-                structure_basics_31()
-                choice_by_user()
-        elif choice==32:
-                structure_nested_array_32()
-                choice_by_user()
-        elif choice==33:
-                structure_funct_33()
-                choice_by_user()
-        elif choice==34:
-                DMA_basics_34()
-                choice_by_user()
-        elif choice==35:
-                DMA_array_structure_35()
-                choice_by_user()
-        elif choice==69:
-                NBWB_69()
-                choice_by_user()
-        elif choice==99:
-                cheatsheet_99()
-                choice_by_user()
-        elif choice==77:
-                aboutme()
-                choice_by_user()
-        elif choice==00:
-                Exit_00()
-        elif choice==911:
-            print("\n")
-            contentmenu()
-            choice_by_user()
     except ValueError:
-        print("Invalid Input! Try Again.\n")
-        choice_by_user()
+        default()
+        return
+    # lookup the choice in the dictionary and call it
+	# done in two lines for clarity :)
+    function = CHOICES.get(choice, default)
+	function()
 
 
 if __name__ == "__main__":
     welcome()
-    choice_by_user()
+    while True:
+        choice_by_user()

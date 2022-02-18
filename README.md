@@ -1,3 +1,5 @@
+![Visitor Count](https://profile-counter.glitch.me/anshu189/count.svg)
+
 # Almaniac - The C Guidance
 ### A user friendly CLI based application for students who desire to learn/get-started with the C Programming Language.
 

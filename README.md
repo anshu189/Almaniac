@@ -10,7 +10,7 @@ python -m pip install -r requirements.txt
 ```
 # OR
 
-Download the ```Almaniac.exe``` file under the Application Directory or from [here]().
+Download the ```Almaniac.exe``` file under the Application Directory or from [here](https://github.com/anshu189/Almaniac/blob/master/Application/Almaniac.exe?raw=true).
 
 Run ```Almaniac.exe```
 <br>

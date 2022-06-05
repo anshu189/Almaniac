@@ -2791,7 +2791,7 @@ def aboutme():
                 wb.open_new("https://www.linkedin.com/in/4n5hu")
                 t_c_func()
             elif i_ochoice==3:
-                wb.open_new("https://www.instagram.com/anshu_ck")
+                wb.open_new("https://www.instagram.com/anshu.ck")
                 t_c_func()
             elif i_ochoice==4:
                 print(colo("--------------------------------------------\n", "magenta"))
